@@ -18,7 +18,7 @@ export default class SearchRecommend {
   }
   
   init(){
-    this.$target.addClassListener('click',(e)=> {console.log(e.target.innerText)})
+    this.$target.addEventListener('click',(e)=> {console.log(e.target.innerText)})
   }
 
   setResults(results) {
