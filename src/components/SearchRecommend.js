@@ -1,4 +1,4 @@
-import { addEvent, removeEvent, TOGGLE } from '../utils/DOM.js'
+import { addClass, removeClass, TOGGLE } from '../utils/DOM.js'
 import {fetchKeyword} from '../utils/API.js'
 
 export default class SearchRecommend {
@@ -18,7 +18,7 @@ export default class SearchRecommend {
   }
   
   init(){
-    this.$target.addEventListener('click',(e)=> {console.log(e.target.innerText)})
+    this.$target.addClassListener('click',(e)=> {console.log(e.target.innerText)})
   }
 
   setResults(results) {
@@ -50,11 +50,11 @@ export default class SearchRecommend {
   }
 
   hide(){
-    removeEvent(this.$target,'show')
+    removeClass(this.$target,'show')
   }
   show(){
     if (this.results.length) {
-      addEvent(this.$target,'show')
+      addClass(this.$target,'show')
     }
   }
 }

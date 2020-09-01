@@ -1,7 +1,7 @@
-export const addEvent = ($el,addClass) => $el.classList.add(addClass)
-export const removeEvent = ($el, removeClass) => $el.classList.remove(removeClass)
-export const TOGGLE = ($el, toggleClass) => {
+export const addClass = ($el, className ) => $el.classList.add(className)
+export const removeClass = ($el, className) => $el.classList.remove(className)
+export const toggleClass = ($el, className) => {
   if ($el) {
-    $el.classList.toggle(toggleClass)
+    $el.classList.toggle(className)
   }
 }

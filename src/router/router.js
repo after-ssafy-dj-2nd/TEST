@@ -9,6 +9,8 @@ export default class Router{
 
   getQuery(){
     const query = window.location.search.match(/\?q=(.+)/g)
-    return query ? query[0].slice(3,) : null
+    if (query){
+      return decodeURI(query)
+    }
   }
 }
